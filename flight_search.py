@@ -29,7 +29,7 @@ class FlightSearch:
         return self.parameters
 
     def make_requests(self):
-        """This function makes a request to KIWI.com API """
+        """This method makes a request to KIWI.com API """
         response = requests.get(url=self.url, headers=self.headers, params=self.parameters)
         response.raise_for_status()
         kiwi_data = response.json()
