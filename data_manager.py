@@ -35,8 +35,7 @@ class DataManager:
         """This method returns True if the price of the cheapest flight is lower than the flight's price in sheet"""
         for i in range(len(list_with_data_from_sheet)):
             if some_iata == list_with_data_from_sheet[i][0]:
-                if list_with_data_from_sheet[i][1] >= list_with_data_from_response[1]:
-                    # self.id = list_with_data_from_sheet[2]
+                if list_with_data_from_sheet[i][1] > list_with_data_from_response[1]:
                     self.price = list_with_data_from_response[1]
                     return True, self.price
 
